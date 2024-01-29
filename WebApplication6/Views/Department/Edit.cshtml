@@ -1,0 +1,54 @@
+﻿@model WebApplication6.Models.DepartmentVM
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2> Edite Department </h2>
+@*
+<form action="/Department/Create" method="post" class=" form-group">
+    <label> DepatmentName</label>
+    <input type="text" name=" DepartmentName" class="form-control" />
+
+    <br/>
+     <label> DepatmentCode</label>
+    <input type="text" name="DepartmentCode" class="form-control" />
+    <br />
+    <center>
+      <input type="submit" value=" save" class="btn btn-primary" />
+
+    </center>
+</form>*@
+
+<form asp-controller="Department" asp-action="Edit" method="post" class=" form-group">
+    <label asp-for="DepartmentName"> Depatment Name</label>
+    <input type="text" asp-for="DepartmentName" class="form-control" />
+    <span class="texe-danger" asp-validation-for="DepartmentName"> </span>
+
+    <br />
+
+    <label asp-for="DepartmentCode"> Depatment Code</label>
+    <input type="text" asp-for="DepartmentCode" class="form-control" />
+    <span class="texe-danger" asp-validation-for="DepartmentCode"> </span>
+
+    <br />
+
+    <center>
+        <input type="submit" value=" Edit" class="btn btn-primary" />
+
+
+    </center>
+</form>
+
+<script src="e:\codes\webapplication6\wwwroot\jquery\jquery.min.js"></script>
+<script src="e:\codes\webapplication6\wwwroot\jquery-validate\jquery.validate.min.js"></script>
+<script src="e:\codes\webapplication6\wwwroot\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js"></script>
+
+
+
+
+
+
+
+
+

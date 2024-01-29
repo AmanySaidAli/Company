@@ -1,0 +1,14 @@
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace WebApplication6.BL.Service
+{
+    public class EmployeeServiceController : Controller
+    {
+        [Route("/EmployeeService/GetCity")]
+        public JsonResult GetCity()
+        {
+
+            return Json("");
+        }
+    }
+}

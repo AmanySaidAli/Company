@@ -1,0 +1,49 @@
+﻿@model WebApplication6.Models.DepartmentVM
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2> Delete Department </h2>
+@*
+<form action="/Department/Create" method="post" class=" form-group">
+    <label> DepatmentName</label>
+    <input type="text" name=" DepartmentName" class="form-control" />
+
+    <br/>
+     <label> DepatmentCode</label>
+    <input type="text" name="DepartmentCode" class="form-control" />
+    <br />
+    <center>
+      <input type="submit" value=" save" class="btn btn-primary" />
+
+    </center>
+</form>*@
+
+<form asp-controller="Department" asp-action="Delete" method="post" class=" form-group">
+    <label asp-for="DepartmentName"> Depatment Name</label>
+    <input type="text" asp-for="DepartmentName" disabled class="form-control" />
+
+    <br />
+
+    <label asp-for="DepartmentCode"> Depatment Code</label>
+    <input type="text" asp-for="DepartmentCode" disabled class="form-control" />
+
+    <br />
+
+    <center>
+        <input type="submit" value=" Delete" class="btn btn-primary" />
+
+
+    </center>
+</form>
+
+
+
+
+
+
+
+
+
+

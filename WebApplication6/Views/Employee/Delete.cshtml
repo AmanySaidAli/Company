@@ -1,0 +1,81 @@
+﻿
+@model WebApplication6.Models.EmployeeVM
+
+@{
+    ViewBag.Title = "Delete Employee";
+}
+
+<h2>Delelte Employee</h2>
+
+
+
+
+
+
+<link href="~/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
+<form asp-controller="Employee" asp-action="Delete" method="post" class=" form-group">
+
+    <label asp-for="Name"> Employee  Name</label>
+    <input type="text" asp-for="Name" disabled class="form-control" />
+
+    <br /> <br />
+
+    <label asp-for="Salary"> Employee Salalry </label>
+    <input type="text" asp-for="Salary" disabled class="form-control" />
+
+    <br /> <br />
+
+    <label asp-for="Address"> Employee  Address</label>
+    <input type="text" asp-for="Address" disabled class="form-control" />
+
+    <br /> <br />
+
+
+    <br /> <br />
+
+    <label asp-for="Email"> Employee  Email</label>
+    <input type="email" asp-for="Email" disabled class="form-control" />
+
+    <br /> <br />
+
+    <label asp-for="HirData"> Employee  HireDate</label>
+    <input type="text" asp-for="HirData" disabled class="form-control" />
+
+    <br /> <br />
+
+    <label asp-for="Notes"> Employee  Notes</label>
+    <textarea asp-for="Notes" class="form-control"disabled rows="4"></textarea>
+
+    <br /> <br />
+
+
+    <label asp-for="DepartmentId"> Employee  Department</label>
+    <select asp-for="DepartmentId" disabled asp-items="@(SelectList)ViewBag.DepartmentList">
+        <option> Choose Department </option>
+    </select>
+
+
+
+    <br /> <br />
+
+
+
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" disabled class="custom-control-input" asp-for="IsActive">
+        <label class="custom-control-label" asp-for="IsActive"> Is Active</label>
+    </div>
+
+
+    <center>
+        <input type="submit" value=" Delete" class="btn btn-primary" />
+
+
+    </center>
+</form>
+
+<script src="e:\codes\webapplication6\wwwroot\jquery\jquery.min.js"></script>
+<script src="e:\codes\webapplication6\wwwroot\jquery-validate\jquery.validate.min.js"></script>
+<script src="e:\codes\webapplication6\wwwroot\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js"></script>
+
+
